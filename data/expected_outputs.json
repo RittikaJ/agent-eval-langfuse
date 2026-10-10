@@ -1,0 +1,764 @@
+[
+  {
+    "id": "invoice-001",
+    "expected": {
+      "invoice": {
+        "vendor": "Paper Trail Supplies",
+        "invoice_number": "INV-001",
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Notebooks",
+            "quantity": "2",
+            "unit_price": "10.00"
+          },
+          {
+            "description": "Pens",
+            "quantity": "3",
+            "unit_price": "2.00"
+          }
+        ],
+        "total": "26.00"
+      },
+      "issues": [],
+      "calculated_total": "26.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-002",
+    "expected": {
+      "invoice": {
+        "vendor": "Paper Trail Supplies",
+        "invoice_number": "INV-002",
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Notebooks",
+            "quantity": "2",
+            "unit_price": "10.00"
+          },
+          {
+            "description": "Pens",
+            "quantity": "3",
+            "unit_price": "2.00"
+          }
+        ],
+        "total": "29.00"
+      },
+      "issues": [
+        "total_mismatch"
+      ],
+      "calculated_total": "26.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-003",
+    "expected": {
+      "invoice": {
+        "vendor": "Paper Trail Supplies",
+        "invoice_number": null,
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Notebooks",
+            "quantity": "2",
+            "unit_price": "10.00"
+          },
+          {
+            "description": "Pens",
+            "quantity": "3",
+            "unit_price": "2.00"
+          }
+        ],
+        "total": "26.00"
+      },
+      "issues": [
+        "missing_invoice_number"
+      ],
+      "calculated_total": "26.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-004",
+    "expected": {
+      "invoice": {
+        "vendor": "Paper Trail Supplies",
+        "invoice_number": "INV-004",
+        "date": "2026-10-08",
+        "currency": null,
+        "line_items": [
+          {
+            "description": "Notebooks",
+            "quantity": "2",
+            "unit_price": "10.00"
+          },
+          {
+            "description": "Pens",
+            "quantity": "3",
+            "unit_price": "2.00"
+          }
+        ],
+        "total": "26.00"
+      },
+      "issues": [
+        "missing_currency"
+      ],
+      "calculated_total": "26.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-005",
+    "expected": {
+      "invoice": {
+        "vendor": "Paper Trail Supplies",
+        "invoice_number": "INV-005",
+        "date": "08/10/2026",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Notebooks",
+            "quantity": "2",
+            "unit_price": "10.00"
+          },
+          {
+            "description": "Pens",
+            "quantity": "3",
+            "unit_price": "2.00"
+          }
+        ],
+        "total": "26.00"
+      },
+      "issues": [
+        "ambiguous_date"
+      ],
+      "calculated_total": "26.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-006",
+    "expected": {
+      "invoice": {
+        "vendor": "Maple Office",
+        "invoice_number": "MAP-006",
+        "date": "2026-10-09",
+        "currency": "CAD",
+        "line_items": [
+          {
+            "description": "Folders",
+            "quantity": "4",
+            "unit_price": "3.25"
+          },
+          {
+            "description": "Labels",
+            "quantity": "2",
+            "unit_price": "1.50"
+          }
+        ],
+        "total": "16.00"
+      },
+      "issues": [],
+      "calculated_total": "16.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-007",
+    "expected": {
+      "invoice": {
+        "vendor": "Harbour Design",
+        "invoice_number": "HD-007",
+        "date": "2026-09-30",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Design hours",
+            "quantity": "3",
+            "unit_price": "45.00"
+          }
+        ],
+        "total": "135.00"
+      },
+      "issues": [],
+      "calculated_total": "135.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-008",
+    "expected": {
+      "invoice": {
+        "vendor": "Lotus Stationery",
+        "invoice_number": "LS-008",
+        "date": "2026-10-01",
+        "currency": "INR",
+        "line_items": [
+          {
+            "description": "Markers",
+            "quantity": "5",
+            "unit_price": "20.00"
+          },
+          {
+            "description": "Paper packs",
+            "quantity": "2",
+            "unit_price": "150.00"
+          }
+        ],
+        "total": "400.00"
+      },
+      "issues": [],
+      "calculated_total": "400.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-009",
+    "expected": {
+      "invoice": {
+        "vendor": "Berlin Desk",
+        "invoice_number": "BD-009",
+        "date": "2026-10-02",
+        "currency": "EUR",
+        "line_items": [
+          {
+            "description": "Desk mat",
+            "quantity": "1",
+            "unit_price": "18.90"
+          },
+          {
+            "description": "Cable clips",
+            "quantity": "3",
+            "unit_price": "2.00"
+          }
+        ],
+        "total": "24.90"
+      },
+      "issues": [],
+      "calculated_total": "24.90",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-010",
+    "expected": {
+      "invoice": {
+        "vendor": "Green Print",
+        "invoice_number": "000010",
+        "date": "2026-10-03",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Print sheets",
+            "quantity": "100",
+            "unit_price": "0.05"
+          }
+        ],
+        "total": "5.00"
+      },
+      "issues": [],
+      "calculated_total": "5.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-011",
+    "expected": {
+      "invoice": {
+        "vendor": "Coastal Books",
+        "invoice_number": "CB-011",
+        "date": "2026-10-09",
+        "currency": "AUD",
+        "line_items": [
+          {
+            "description": "Workbooks",
+            "quantity": "2",
+            "unit_price": "7.50"
+          },
+          {
+            "description": "Bookmarks",
+            "quantity": "4",
+            "unit_price": "0.25"
+          }
+        ],
+        "total": "16.00"
+      },
+      "issues": [],
+      "calculated_total": "16.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-012",
+    "expected": {
+      "invoice": {
+        "vendor": "Open Shelf",
+        "invoice_number": "OS-012",
+        "date": "2026-10-05",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Sample pack",
+            "quantity": "1",
+            "unit_price": "0.00"
+          },
+          {
+            "description": "Storage box",
+            "quantity": "2",
+            "unit_price": "4.00"
+          }
+        ],
+        "total": "8.00"
+      },
+      "issues": [],
+      "calculated_total": "8.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-013",
+    "expected": {
+      "invoice": {
+        "vendor": "Maple Office",
+        "invoice_number": "MAP-013",
+        "date": "2026-10-09",
+        "currency": "CAD",
+        "line_items": [
+          {
+            "description": "Folders",
+            "quantity": "4",
+            "unit_price": "3.25"
+          },
+          {
+            "description": "Labels",
+            "quantity": "2",
+            "unit_price": "1.50"
+          }
+        ],
+        "total": "15.00"
+      },
+      "issues": [
+        "total_mismatch"
+      ],
+      "calculated_total": "16.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-014",
+    "expected": {
+      "invoice": {
+        "vendor": "Harbour Design",
+        "invoice_number": "HD-014",
+        "date": "2026-09-30",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Design hours",
+            "quantity": "3",
+            "unit_price": "45.00"
+          }
+        ],
+        "total": "150.00"
+      },
+      "issues": [
+        "total_mismatch"
+      ],
+      "calculated_total": "135.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-015",
+    "expected": {
+      "invoice": {
+        "vendor": "Lotus Stationery",
+        "invoice_number": "LS-015",
+        "date": "2026-10-01",
+        "currency": "INR",
+        "line_items": [
+          {
+            "description": "Markers",
+            "quantity": "5",
+            "unit_price": "20.00"
+          },
+          {
+            "description": "Paper packs",
+            "quantity": "2",
+            "unit_price": "150.00"
+          }
+        ],
+        "total": "100.00"
+      },
+      "issues": [
+        "total_mismatch"
+      ],
+      "calculated_total": "400.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-016",
+    "expected": {
+      "invoice": {
+        "vendor": "Green Print",
+        "invoice_number": "GP-016",
+        "date": "2026-10-03",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Print sheets",
+            "quantity": "100",
+            "unit_price": "0.05"
+          }
+        ],
+        "total": "5.01"
+      },
+      "issues": [
+        "total_mismatch"
+      ],
+      "calculated_total": "5.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-017",
+    "expected": {
+      "invoice": {
+        "vendor": null,
+        "invoice_number": "VN-017",
+        "date": "2026-10-06",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Envelopes",
+            "quantity": "4",
+            "unit_price": "1.25"
+          }
+        ],
+        "total": "5.00"
+      },
+      "issues": [
+        "missing_vendor"
+      ],
+      "calculated_total": "5.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-018",
+    "expected": {
+      "invoice": {
+        "vendor": "North Studio",
+        "invoice_number": "NS-018",
+        "date": null,
+        "currency": "EUR",
+        "line_items": [
+          {
+            "description": "Studio hours",
+            "quantity": "2",
+            "unit_price": "30.00"
+          }
+        ],
+        "total": "60.00"
+      },
+      "issues": [
+        "missing_date"
+      ],
+      "calculated_total": "60.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-019",
+    "expected": {
+      "invoice": {
+        "vendor": "Bright Desk",
+        "invoice_number": "BD-019",
+        "date": "2026-10-07",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Organizers",
+            "quantity": "3",
+            "unit_price": "4.00"
+          }
+        ],
+        "total": null
+      },
+      "issues": [
+        "missing_total"
+      ],
+      "calculated_total": "12.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-020",
+    "expected": {
+      "invoice": {
+        "vendor": "Tiny Parts",
+        "invoice_number": "TP-020",
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Washers",
+            "quantity": "3",
+            "unit_price": "0.10"
+          }
+        ],
+        "total": "0.30"
+      },
+      "issues": [],
+      "calculated_total": "0.30",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-021",
+    "expected": {
+      "invoice": {
+        "vendor": "Tiny Parts",
+        "invoice_number": "TP-021",
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Precision spacers",
+            "quantity": "3",
+            "unit_price": "0.105"
+          }
+        ],
+        "total": "0.32"
+      },
+      "issues": [],
+      "calculated_total": "0.32",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-022",
+    "expected": {
+      "invoice": {
+        "vendor": "Fabric House",
+        "invoice_number": "FH-022",
+        "date": "2026-10-08",
+        "currency": "EUR",
+        "line_items": [
+          {
+            "description": "Fabric metres",
+            "quantity": "1.5",
+            "unit_price": "4.25"
+          }
+        ],
+        "total": "6.38"
+      },
+      "issues": [],
+      "calculated_total": "6.38",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-023",
+    "expected": {
+      "invoice": {
+        "vendor": "Micro Supply",
+        "invoice_number": "MS-023",
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Sample A",
+            "quantity": "1",
+            "unit_price": "0.335"
+          },
+          {
+            "description": "Sample B",
+            "quantity": "1",
+            "unit_price": "0.335"
+          }
+        ],
+        "total": "0.68"
+      },
+      "issues": [],
+      "calculated_total": "0.68",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-024",
+    "expected": {
+      "invoice": {
+        "vendor": "Date Desk",
+        "invoice_number": "DD-024",
+        "date": "04/05/2026",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Planner",
+            "quantity": "2",
+            "unit_price": "6.50"
+          }
+        ],
+        "total": "13.00"
+      },
+      "issues": [
+        "ambiguous_date"
+      ],
+      "calculated_total": "13.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-025",
+    "expected": {
+      "invoice": {
+        "vendor": "Symbol Shop",
+        "invoice_number": "SS-025",
+        "date": "2026-10-08",
+        "currency": null,
+        "line_items": [
+          {
+            "description": "Clips",
+            "quantity": "2",
+            "unit_price": "2.50"
+          }
+        ],
+        "total": "5.00"
+      },
+      "issues": [
+        "missing_currency"
+      ],
+      "calculated_total": "5.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-026",
+    "expected": {
+      "invoice": {
+        "vendor": "Symbol Shop",
+        "invoice_number": "SS-026",
+        "date": "2026-10-08",
+        "currency": null,
+        "line_items": [
+          {
+            "description": "Clips",
+            "quantity": "2",
+            "unit_price": "2.50"
+          }
+        ],
+        "total": "5.00"
+      },
+      "issues": [
+        "missing_currency"
+      ],
+      "calculated_total": "5.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-027",
+    "expected": {
+      "invoice": {
+        "vendor": "Paper Trail Supplies",
+        "invoice_number": "PT-027",
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Notebooks",
+            "quantity": "2",
+            "unit_price": "10.00"
+          },
+          {
+            "description": "Pens",
+            "quantity": "3",
+            "unit_price": "2.00"
+          }
+        ],
+        "total": "26.00"
+      },
+      "issues": [],
+      "calculated_total": "26.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-028",
+    "expected": {
+      "invoice": {
+        "vendor": "Corner Office",
+        "invoice_number": "CO-028",
+        "date": "2026-10-08",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Tape",
+            "quantity": "2",
+            "unit_price": "3.00"
+          }
+        ],
+        "total": "9.00"
+      },
+      "issues": [
+        "total_mismatch"
+      ],
+      "calculated_total": "6.00",
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "invoice-029",
+    "expected": {
+      "invoice": {
+        "vendor": "Blue Studio",
+        "invoice_number": "BS-029",
+        "date": "2026-10-08",
+        "currency": "EUR",
+        "line_items": [
+          {
+            "description": "Editing hours",
+            "quantity": "2",
+            "unit_price": "25.00"
+          }
+        ],
+        "total": "50.00"
+      },
+      "issues": [],
+      "calculated_total": "50.00",
+      "status": "valid"
+    }
+  },
+  {
+    "id": "invoice-030",
+    "expected": {
+      "invoice": {
+        "vendor": "Fresh Paper",
+        "invoice_number": "FP-030",
+        "date": "2026-10-08",
+        "currency": null,
+        "line_items": [
+          {
+            "description": "Paper packs",
+            "quantity": "2",
+            "unit_price": "4.50"
+          }
+        ],
+        "total": "9.00"
+      },
+      "issues": [
+        "missing_currency"
+      ],
+      "calculated_total": "9.00",
+      "status": "needs_review"
+    }
+  }
+]

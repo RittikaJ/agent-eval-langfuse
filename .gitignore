@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+results/
+
+# Local editor settings
+.idea/
+.vscode/
+.coverage
+htmlcov/
+
+# Local article drafts and illustrations (published separately)
+BLOG.md
+BLOG.html
+assets/
+GUIDE.md
